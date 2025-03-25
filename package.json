@@ -1,0 +1,38 @@
+{
+  "name": "@owl-systems/frontend-env",
+  "version": "0.1.0",
+  "description": "INFLUENCER HUB Front-end code based on @owl-systems.",
+  "main": "index.js",
+  "repository": "https://github.com/INFLUENCE-HUB-AU/Broker-App-FE",
+  "author": "Cesar Daniel Bañuelos Gómez <developer@danielbgomez.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "nx build @owl-systems/web",
+    "build:ui-kit": "nx build @owl-systems/ui-kit",
+    "build:influencehub": "nx build @owl-systems/web",
+    "build:storybook": "nx run-many -t build:storybook",
+    "eslint": "nx run-many -t eslint",
+    "format": "nx run-many -t format",
+    "check-format": "nx run-many -t check-format",
+    "dev": "nx dev @owl-systems/web",
+    "watch": "concurrently \"yarn:watch:ui-kit\" \"yarn:dev\"",
+    "watch:ui-kit": "nx run @owl-systems/ui-kit:watch",
+    "storybook": "nx run-many -t storybook",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "lerna": "^8.1.9"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.19.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsdoc": "^50.6.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-storybook": "^0.11.2",
+    "husky": "^9.1.7"
+  }
+}

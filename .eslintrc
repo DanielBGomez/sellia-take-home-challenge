@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "extends": ["plugin:prettier/recommended", "plugin:storybook/recommended"],
+  "plugins": ["import", "@typescript-eslint", "jsdoc"],
+  "rules": {
+    "import/no-default-export": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["builtin", "external"],
+          "internal",
+          ["index", "parent", "sibling"]
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "jsdoc/require-jsdoc": [
+      "error",
+      {
+        "contexts": ["TSMethodSignature"]
+      }
+    ]
+  }
+}
