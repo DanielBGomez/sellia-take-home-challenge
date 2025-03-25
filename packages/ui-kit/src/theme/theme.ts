@@ -7,7 +7,7 @@ import { createTheme, ThemeOptions } from '@mui/material/styles';
 import { ColorPaletteLight } from './theme.light';
 import { ColorPaletteDark } from './theme.dark';
 
-import { MuiCssBaseline, MuiTypography } from './components';
+import { MuiChip, MuiCssBaseline, MuiTypography } from './components';
 
 // Shared theme options
 const BaseThemeOptions: ThemeOptions = {
@@ -29,6 +29,7 @@ const BaseThemeOptions: ThemeOptions = {
     },
   },
   components: {
+    MuiChip,
     MuiCssBaseline,
     MuiTypography,
   },
