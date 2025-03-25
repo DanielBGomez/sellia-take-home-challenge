@@ -15,7 +15,7 @@ import '@fontsource/outfit/800.css';
 import '@fontsource/outfit/900.css';
 
 // Theme
-import { LightTheme } from '../src';
+import { DarkTheme, LightTheme } from '../src';
 
 // Tailwind
 import '../src/tailwind.css';
@@ -23,12 +23,29 @@ import '../src/tailwind.css';
 /**
  * With Mui Theme decorator
  */
-export const withMuiTheme = (Story) => (
-  <ThemeProvider theme={LightTheme}>
+export const withMuiTheme = (Story, context) => (
+  <ThemeProvider theme={context.globals.darkTheme ? DarkTheme : LightTheme}>
     <CssBaseline />
     <Story />
   </ThemeProvider>
 );
+
+export const globalTypes = {
+  darkTheme: {
+    name: 'Dark Mode',
+    description: 'Toggle dark mode for components',
+    defaultValue: false,
+    toolbar: {
+      icon: 'moon', // Ícono que aparece en la toolbar
+      items: [
+        { value: true, title: 'Dark Mode', icon: 'moon' },
+        { value: false, title: 'Light Mode', icon: 'circlehollow' },
+      ],
+      showName: false,
+      dynamicTitle: true,
+    },
+  },
+};
 
 export const decorators = [withMuiTheme];
 
