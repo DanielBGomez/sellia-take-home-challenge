@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import svgr from 'vite-plugin-svgr';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import tailwindcss from '@tailwindcss/vite';
@@ -8,6 +9,7 @@ import { preserveUseClient } from './plugins/vite-preserve-use-client';
 export default defineConfig({
   plugins: [
     tailwindcss(),
+    svgr(),
     react(),
     dts({
       insertTypesEntry: true, // Genera archivos `.d.ts` para tipado de TypeScript

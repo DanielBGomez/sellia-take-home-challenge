@@ -1,5 +1,5 @@
 // Modules
-import { Components, Theme, ChipProps } from '@mui/material';
+import { Components, Theme } from '@mui/material';
 
 /**
  * MuiChip extended theme values

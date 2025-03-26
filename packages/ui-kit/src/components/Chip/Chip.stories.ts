@@ -8,7 +8,7 @@ import { Chip } from '.';
 const meta: Meta<typeof Chip> = {
   title: 'Chip',
   component: Chip,
-  tags: ['Chip', 'ui kit'],
+  tags: ['Chip', 'UI Kit'],
   argTypes: {
     color: {
       control: { type: 'select' },

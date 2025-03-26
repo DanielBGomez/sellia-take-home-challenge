@@ -12,7 +12,7 @@ import { Input } from '.';
 const meta: Meta<typeof Input> = {
   title: 'Input',
   component: Input,
-  tags: ['Input', 'ui kit'],
+  tags: ['Input', 'UI Kit'],
   argTypes: {
     required: {
       control: 'boolean',

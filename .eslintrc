@@ -10,18 +10,26 @@
         "groups": [
           ["builtin", "external"],
           "internal",
-          ["index", "parent", "sibling"]
+          ["index", "parent", "sibling"],
         ],
-        "newlines-between": "always"
-      }
+        "newlines-between": "always",
+      },
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "caughtErrors": "all",
+      },
     ],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
     "jsdoc/require-jsdoc": [
       "error",
       {
-        "contexts": ["TSMethodSignature"]
-      }
-    ]
-  }
+        "contexts": ["TSMethodSignature"],
+      },
+    ],
+  },
 }

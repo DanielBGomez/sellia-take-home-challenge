@@ -2,6 +2,8 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
+import moment from 'moment';
+import 'moment/locale/es';
 
 // Fonts
 import '@fontsource/outfit/100.css';
@@ -19,6 +21,9 @@ import { DarkTheme, LightTheme } from '../src';
 
 // Tailwind
 import '../src/tailwind.css';
+
+// Moment locale
+moment.locale('es');
 
 /**
  * With Mui Theme decorator
