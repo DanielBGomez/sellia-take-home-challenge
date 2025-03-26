@@ -13,16 +13,20 @@
   "directories": {
     "dist": "dist"
   },
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs.js"
     },
     "./mui-material": {
+      "types": "./dist/mui-material/index.d.ts",
       "import": "./dist/mui-material.esm.js",
-      "require": "./dist/mui-material.cjs.js",
-      "types": "./dist/mui-material.d.ts"
+      "require": "./dist/mui-material.cjs.js"
+    },
+    "./styles.css": {
+      "default": "./dist/ui-kit.css"
     }
   },
   "scripts": {
