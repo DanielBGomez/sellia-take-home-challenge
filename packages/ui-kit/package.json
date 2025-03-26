@@ -2,10 +2,8 @@
   "name": "@owl-systems/ui-kit",
   "version": "0.1.0",
   "description": "UI Kit for INFLUENCER HUB based in Owl Systems",
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "repository": "https://github.com/INFLUENCE-HUB-AU/Broker-App-FE",
+  "type": "module",
+  "repository": "https://github.com/DanielBGomez/sellia-take-home-challenge",
   "author": "Cesar Daniel Bañuelos Gómez <contact@danielbgomez.com>",
   "license": "MIT",
   "private": true,
@@ -14,6 +12,18 @@
   ],
   "directories": {
     "dist": "dist"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./mui-material": {
+      "import": "./dist/mui-material.esm.js",
+      "require": "./dist/mui-material.cjs.js",
+      "types": "./dist/mui-material.d.ts"
+    }
   },
   "scripts": {
     "dev": "vite",
@@ -37,7 +47,7 @@
     "@emotion/styled": "^11.14.0",
     "@fontsource/outfit": "^5.2.5",
     "@mui/icons-material": "^6.4.8",
-    "@mui/material": "^6.4.6",
+    "@mui/material": "6.4.8",
     "@storybook/addon-essentials": "^8.6.4",
     "@storybook/addon-interactions": "^8.6.4",
     "@storybook/cli": "^8.6.4",

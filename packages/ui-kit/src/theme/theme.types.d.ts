@@ -1,6 +1,9 @@
 // Modules
 import { CSSProperties } from 'react';
 
+// Interafaces
+export type Themes = 'light' | 'dark';
+
 // Module Augmentation
 declare module '@mui/material/styles' {
   interface TypographyVariants {

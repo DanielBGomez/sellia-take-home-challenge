@@ -1,5 +1,4 @@
 // Modules
-import { Moment } from 'moment';
 
 // Interfaces
 export interface Contact {

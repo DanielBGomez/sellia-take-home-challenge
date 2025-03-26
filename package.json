@@ -1,9 +1,9 @@
 {
   "name": "@owl-systems/frontend-env",
   "version": "0.1.0",
-  "description": "INFLUENCER HUB Front-end code based on @owl-systems.",
+  "description": "Sellia Take-Home Code Challenge - Front-end code based on @owl-systems.",
   "main": "index.js",
-  "repository": "https://github.com/INFLUENCE-HUB-AU/Broker-App-FE",
+  "repository": "https://github.com/DanielBGomez/sellia-take-home-challenge",
   "author": "Cesar Daniel Bañuelos Gómez <developer@danielbgomez.com>",
   "license": "MIT",
   "private": true,
