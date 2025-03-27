@@ -32,8 +32,6 @@ export const ChatListContainer = () => {
   const [activeTab, setActiveTab] = useState(undefined);
   const [filterString, setFilterString] = useState('');
 
-  console.log('clients', clients);
-
   // Computed
   /**
    * Chats based on the stored Clients.

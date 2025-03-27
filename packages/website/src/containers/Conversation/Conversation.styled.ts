@@ -10,5 +10,5 @@ export const MessagesWrapper = styled('div')({
   overflowY: 'scroll',
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  backgroundImage: "url('/public/chats-bg.png')",
+  backgroundImage: "url('/chats-bg.png')",
 });
