@@ -11,4 +11,5 @@ export interface MessageBubbleProps extends Message {
 
 export interface RootElementProps {
   variant: UserType;
+  hasActions: boolean;
 }

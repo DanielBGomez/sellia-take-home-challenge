@@ -23,11 +23,15 @@ export const MessageBubble = ({
   const delivered = moment(deliveredAt);
   const read = moment(readAt);
 
+  const actions = String(text).match(/\|\[([^\[\]]+?)\]/g);
+  const parsedText = actions ? text.replace(actions.join(''), '') : text;
+
   // Render
   return (
     <Root
       className="flex flex-col"
       variant={typeUser}
+      hasActions={Boolean(actions.length)}
     >
       <div className="flex flex-col gap-0 items-stretch px-3">
         <div className="flex justify-stretch gap-2">
@@ -36,7 +40,7 @@ export const MessageBubble = ({
             component="div"
             className="grow-1"
           >
-            {text}
+            {parsedText}
           </Typography>
         </div>
         <div className="flex justify-end gap-2 pb-1">
@@ -45,6 +49,19 @@ export const MessageBubble = ({
           </Typography>
         </div>
       </div>
+      {actions && (
+        <div className="flex flex-col mt-2">
+          {actions.map((action) => (
+            <Typography
+              variant="small"
+              component="div"
+              className="message-bubble--action flex w-full py-2 px-3 justify-center"
+            >
+              {action.replace(/(?:^\|\[|\]$)/g, '')}
+            </Typography>
+          ))}
+        </div>
+      )}
     </Root>
   );
 };
