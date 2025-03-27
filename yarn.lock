@@ -3206,6 +3206,11 @@
   resolved "https://registry.yarnpkg.com/@types/resolve/-/resolve-1.20.6.tgz#e6e60dad29c2c8c206c026e6dd8d6d1bdda850b8"
   integrity sha512-A4STmOXPhMUtHH+S6ymgE2GiBSMqf4oTvcQZMcHzokuTLVYzXTB8ttjcgxOVaAp2lGwEdzZ0J+cRbbeevQj1UQ==
 
+"@types/searchjs@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@types/searchjs/-/searchjs-1.0.2.tgz#f9323df3ff213288df4b22f62c46f9d22943acfc"
+  integrity sha512-hN0GlP1FBlsqWm0/bUIQzPlOkL3zrZAFFmtl4JgYlLEVRKsewBZsZSXOgkMb/MI/sPTcCn4tNvzwRrUhJWzqxA==
+
 "@types/semver@^7.3.4":
   version "7.5.8"
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.5.8.tgz#8268a8c57a3e4abd25c165ecd36237db7948a55e"
@@ -9050,6 +9055,11 @@ scheduler@^0.25.0:
   version "0.25.0"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.25.0.tgz#336cd9768e8cceebf52d3c80e3dcf5de23e7e015"
   integrity sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==
+
+searchjs@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/searchjs/-/searchjs-1.1.2.tgz#57f79619be9da8f7ce49ffcc1327f4f1ab1a3bad"
+  integrity sha512-ik1HfzYG8XEXuJUo3pdwvrUkzYKBqYUIy/4Aikf5HcIc4zMBhOs7dtVybiGpWSkykCdd/UDy78uUocc8+gz1cw==
 
 "semver@2 || 3 || 4 || 5", semver@^5.6.0:
   version "5.7.2"

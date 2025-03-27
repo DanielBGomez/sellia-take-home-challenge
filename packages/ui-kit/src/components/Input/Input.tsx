@@ -26,7 +26,7 @@ export const Input = ({
   hasError,
   isValid,
   value,
-  onChange = (e: ChangeEvent<HTMLInputElement>) => {},
+  onChange = (e: string) => {},
   inputRef,
   inputProps,
   rootProps,
@@ -77,7 +77,7 @@ export const Input = ({
           isValid={isValid}
           placeholder={placeholder}
           value={value}
-          onChange={onChange}
+          onChange={(e) => onChange(e.target.value)}
           sx={{
             paddingLeft: `${leftSpace}px`,
             paddingRight: `${rightSpace}px`,

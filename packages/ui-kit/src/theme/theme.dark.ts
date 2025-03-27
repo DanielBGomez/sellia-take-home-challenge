@@ -14,7 +14,7 @@ export const ColorPaletteDark: PaletteOptions = {
   primaryContainer: { main: '#1C2E66', contrastText: '#AFCFFF' },
   primaryDarkContainer: { main: '#223A5E', contrastText: '#AFCFFF' },
   secondaryContainer: { main: '#154C3E', contrastText: '#4EE3B1' },
-  tertiaryContainer: { main: '#154C3E', contrastText: '#7AD4FF' },
+  tertiaryContainer: { main: '#1A3C4D', contrastText: '#7AD4FF' },
   surface: { main: '#0E0D13', contrastText: '#F5F9FA' },
   surfaceDim: { main: '#16151E', contrastText: '#9BB0B5' },
   surfaceContainer: { main: '#21202D', contrastText: '#F5F9FA' },

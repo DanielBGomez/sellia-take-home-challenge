@@ -5,7 +5,7 @@ import { styled, Avatar, Box as BoxComponent } from '@mui/material';
 import { BoxComponentProps, FlagElementProps } from './ChatListItem.types';
 
 // Elements
-export const Root = styled('div')(({ theme, onClick }) => ({
+export const Root = styled('div')(({ onClick }) => ({
   cursor: onClick ? 'pointer' : 'default',
 }));
 
@@ -34,7 +34,10 @@ export const Flag = styled('div')<FlagElementProps>(({ theme, status }) => {
   return {
     height: 'auto',
     backgroundColor: color,
-    width: theme.spacing(0.5),
+    width: theme.spacing(1),
+
+    // Animations
+    transition: 'background 100ms linear',
   };
 });
 
@@ -45,7 +48,7 @@ export const Box = styled(BoxComponent)<BoxComponentProps>(
       theme.palette[active ? 'tertiaryContainer' : 'surfaceContainer'].main,
 
     // Animations/Transitions
-    transition: 'backgroundColor 100ms linear',
+    transition: 'background 100ms linear',
   }),
 );
 

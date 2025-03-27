@@ -12,6 +12,8 @@ export interface ExperienceStoreState {
   clientsIds: Set<string>;
   addClient: (client: Client) => void;
   conversations: Record<string, Conversation>;
+  activeConversation?: string;
   addConversation: (conv: Conversation) => void;
   addMessage: (conversationId: string, message: Message) => void;
+  setActiveConversation: (conversationId: string) => void;
 }

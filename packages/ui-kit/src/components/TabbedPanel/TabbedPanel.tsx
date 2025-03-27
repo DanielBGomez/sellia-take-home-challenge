@@ -28,7 +28,11 @@ export const TabbedPanel = ({
    */
   useEffect(() => {
     if (tabs.length) setActiveTab(tabs[0].value);
-  }, [tabs]);
+  }, []);
+  /**
+   * Trigger onChange on ActiveTab updates
+   */
+  useEffect(() => onChange(activeTab), [onChange, activeTab]);
 
   // Render
   return (
@@ -38,6 +42,7 @@ export const TabbedPanel = ({
           <Tab
             key={value}
             active={activeTab === value}
+            onClick={() => setActiveTab(value)}
           >
             {icon || ''}
             {label}

@@ -13,7 +13,7 @@ export interface InputProps extends InputElementProps {
   readonly?: boolean;
   required?: boolean;
   value: any;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onChange: (value: string) => void;
   inputRef?: RefObject<any>;
   inputProps?: HTMLAttributes<HTMLInputElement>;
   rootProps?: HTMLAttributes<HTMLDivElement>;

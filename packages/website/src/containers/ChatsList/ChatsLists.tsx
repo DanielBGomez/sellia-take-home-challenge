@@ -1,5 +1,6 @@
 // Modules
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
+import searchjs from 'searchjs';
 import { Chip, Input, TabbedPanel, ChatListItem } from '@owl-systems/ui-kit';
 import { Typography } from '@owl-systems/ui-kit/mui-material';
 
@@ -18,33 +19,60 @@ import { useConversationAPI } from '../../api';
 export const ChatListContainer = () => {
   // Stores
   const clients = useExperienceStore((state) => state.clients);
+  const activeConversation = useExperienceStore(
+    (state) => state.activeConversation,
+  );
+  const setActiveConversation = useExperienceStore(
+    (state) => state.setActiveConversation,
+  );
   const { getConversationLastMessage } = useConversationAPI();
 
-  // Effects
+  // States
+  const [activeTab, setActiveTab] = useState(undefined);
+  const [filterString, setFilterString] = useState('');
 
+  // Computed
+  /**
+   * Chats based on the stored Clients.
+   */
   const chats = useMemo(
     () =>
-      clients.map(({ _id, name }) => {
-        const lastMessage = getConversationLastMessage(_id);
-        console.log(lastMessage);
-        return (
-          <ChatListItem
-            key={_id}
-            contact={{
-              id: _id,
-              name,
-              source: 'whatsapp',
-            }}
-            lastMessage={lastMessage}
-          />
-        );
-      }),
-    [clients, getConversationLastMessage],
+      clients
+        .filter(() => activeTab === 'chats') // Tab filter
+        .filter(
+          ({ name }) =>
+            filterString === '' || name.match(new RegExp(filterString, 'i')),
+        )
+        .map(({ _id, name }) => {
+          const lastMessage = getConversationLastMessage(_id);
+          return (
+            <ChatListItem
+              key={_id}
+              contact={{
+                id: _id,
+                name,
+                source: 'whatsapp',
+              }}
+              lastMessage={lastMessage}
+              active={_id === activeConversation}
+              onClick={() => setActiveConversation(_id)}
+            />
+          );
+        }),
+    [
+      clients,
+      activeTab,
+      filterString,
+      getConversationLastMessage,
+      activeConversation,
+      setActiveConversation,
+    ],
   );
 
   // Render
   return (
     <TabbedPanel
+      onChange={setActiveTab}
       tabs={[
         {
           label: 'Chats',
@@ -64,7 +92,7 @@ export const ChatListContainer = () => {
         borderRightColor: 'outlineVariant.main',
       }}
       header={
-        <div className="flex flex-col items-start pt-3 px-4 pb-6">
+        <div className="pt-3 px-4 pb-4">
           <Input
             placeholder="Busca por Nombre o número"
             icons={[
@@ -73,34 +101,52 @@ export const ChatListContainer = () => {
                 position: 'right',
               },
             ]}
+            value={filterString}
+            onChange={setFilterString}
           />
-          <Typography
-            variant="small"
-            component="div"
-            sx={{
-              marginTop: 2,
-              marginBottom: 0.5,
-            }}
-          >
-            Mostrar:
-          </Typography>
-          <div className="flex items-center justify-start gap-2">
-            <Chip
-              label="Todos"
-              color="tertiary"
-            />
-            <Chip
-              label="No Leidos"
-              color="primaryDarkContainer"
-            />
-            <Chip
-              label="Pendientes"
-              color="primaryDarkContainer"
-            />
-          </div>
         </div>
       }
     >
+      <div className="flex flex-col items-start px-4 pb-6">
+        <Typography
+          variant="small"
+          component="div"
+          sx={{
+            marginBottom: 0.5,
+          }}
+        >
+          Mostrar:
+        </Typography>
+        <div className="flex items-center justify-start gap-2">
+          <Chip
+            label="Todos"
+            color="tertiary"
+          />
+          {activeTab === 'chats' ? (
+            <>
+              <Chip
+                label="No Leidos"
+                color="primaryDarkContainer"
+              />
+              <Chip
+                label="Pendientes"
+                color="primaryDarkContainer"
+              />
+            </>
+          ) : (
+            <>
+              <Chip
+                label="Finalizados"
+                color="primaryDarkContainer"
+              />
+              <Chip
+                label="Cerrados"
+                color="primaryDarkContainer"
+              />
+            </>
+          )}
+        </div>
+      </div>
       <div className="flex flex-col gap-2">{chats}</div>
     </TabbedPanel>
   );

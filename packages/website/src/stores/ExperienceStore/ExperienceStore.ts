@@ -30,6 +30,7 @@ export const useExperienceStore = create<ExperienceStoreState>((set, get) => ({
     }
   },
   conversations: {},
+  activeConversation: undefined,
   addConversation: (conv) =>
     set((state) => ({
       conversations: { ...state.conversations, [conv.id]: conv },
@@ -45,5 +46,9 @@ export const useExperienceStore = create<ExperienceStoreState>((set, get) => ({
         },
       },
     }));
+  },
+  setActiveConversation: (conversationId) => {
+    if (get().conversations[conversationId])
+      set(() => ({ activeConversation: conversationId }));
   },
 }));
