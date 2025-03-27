@@ -1,9 +1,6 @@
 // Modules
 import { CSSProperties } from 'react';
 
-// Interafaces
-export type Themes = 'light' | 'dark';
-
 // Module Augmentation
 declare module '@mui/material/styles' {
   interface TypographyVariants {
@@ -53,5 +50,53 @@ declare module '@mui/material/Typography' {
     body: true;
     small: true;
     smallest: true;
+  }
+}
+
+declare module '@mui/material/Button' {
+  interface ButtonPropsColorOverrides {
+    primaryDark: true;
+    tertiary: true;
+    primaryContainer: true;
+    primaryDarkContainer: true;
+    secondaryContainer: true;
+    tertiaryContainer: true;
+    surface: true;
+    surfaceDim: true;
+    surfaceContainer: true;
+    outline: true;
+    outlineVariant: true;
+  }
+}
+
+declare module '@mui/material/IconButton' {
+  interface IconButtonPropsColorOverrides {
+    primaryDark: true;
+    tertiary: true;
+    primaryContainer: true;
+    primaryDarkContainer: true;
+    secondaryContainer: true;
+    tertiaryContainer: true;
+    surface: true;
+    surfaceDim: true;
+    surfaceContainer: true;
+    outline: true;
+    outlineVariant: true;
+  }
+}
+
+declare module '@mui/material/Chip' {
+  interface ChipPropsColorOverrides {
+    primaryDark: true;
+    tertiary: true;
+    primaryContainer: true;
+    primaryDarkContainer: true;
+    secondaryContainer: true;
+    tertiaryContainer: true;
+    surface: true;
+    surfaceDim: true;
+    surfaceContainer: true;
+    outline: true;
+    outlineVariant: true;
   }
 }

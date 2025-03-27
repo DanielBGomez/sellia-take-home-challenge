@@ -38,8 +38,6 @@ export const Input = ({
     disabled,
   });
 
-  console.log(leftSpace, rightSpace);
-
   // Render
   return (
     <Root

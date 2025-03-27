@@ -1,2 +1,2 @@
 export * from './theme';
-export type { Themes } from './theme.types';
+export type Themes = 'light' | 'dark';

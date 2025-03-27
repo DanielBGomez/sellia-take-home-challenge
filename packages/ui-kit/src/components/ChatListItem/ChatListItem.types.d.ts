@@ -1,9 +1,6 @@
 // Modules
 import { BoxProps } from '@mui/material';
 
-// Local Imports
-import { Contact, Message } from '../../global.types';
-
 // Interfaces
 export interface ChatListItemProps {
   contact: Contact;
@@ -19,4 +16,25 @@ export interface FlagElementProps {
 
 export interface BoxComponentProps extends BoxProps {
   active?: boolean;
+}
+
+export interface Message {
+  id: string;
+  type: 'text' | 'tText';
+  text: string;
+  user: {
+    id: string;
+    type: string;
+  };
+  errorCode: number | null;
+  createdAt: string;
+  updatedAt: string;
+  readAt: string | null;
+}
+
+export interface Contact {
+  id: string;
+  name: string;
+  image: string;
+  source: string;
 }
