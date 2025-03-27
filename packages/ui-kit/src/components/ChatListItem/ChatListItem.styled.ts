@@ -2,7 +2,7 @@
 import { styled, Avatar, Box as BoxComponent } from '@mui/material';
 
 // Own Imports
-import { BoxComponentProps, FlagElementProps } from './ChatListItem';
+import { BoxComponentProps, FlagElementProps } from './ChatListItem.types';
 
 // Elements
 export const Root = styled('div')(({ theme, onClick }) => ({

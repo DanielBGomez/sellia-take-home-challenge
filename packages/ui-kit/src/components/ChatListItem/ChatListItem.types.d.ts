@@ -19,22 +19,21 @@ export interface BoxComponentProps extends BoxProps {
 }
 
 export interface Message {
-  id: string;
-  type: 'text' | 'tText';
+  _id: string;
+  type: 'text' | 'tText' | 'video';
   text: string;
-  user: {
-    id: string;
-    type: string;
-  };
+  user: string;
+  typeUser: string;
   errorCode: number | null;
   createdAt: string;
   updatedAt: string;
+  deliveredAt: string;
   readAt: string | null;
 }
 
 export interface Contact {
   id: string;
   name: string;
-  image: string;
-  source: string;
+  image?: string;
+  source?: string;
 }

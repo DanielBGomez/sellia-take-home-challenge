@@ -28,6 +28,7 @@ export const HeyCenterExperience = () => {
   const changeTheme = useExperienceStore((state) => state.changeTheme);
   const clientsIds = useExperienceStore((state) => state.clientsIds);
   const addClient = useExperienceStore((state) => state.addClient);
+  const addConversation = useExperienceStore((state) => state.addConversation);
 
   // Hooks
   useSystemTheme();
@@ -56,9 +57,9 @@ export const HeyCenterExperience = () => {
    */
   useEffect(() => {
     Array.from(clientsIds).forEach((id) => {
-      getConversation(id);
+      getConversation(id).then((conversation) => addConversation(conversation));
     });
-  }, [clientsIds, getConversation]);
+  }, [addConversation, clientsIds, getConversation]);
 
   // Render
   return (

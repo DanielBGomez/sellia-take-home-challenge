@@ -1,8 +1,8 @@
 // Modules
-import { Themes } from '@owl-systems/ui-kit';
+import { Message, Themes } from '@owl-systems/ui-kit';
 
 // Local Imports
-import { Client } from '../../api';
+import { Client, Conversation } from '../../api';
 
 // Interfaces
 export interface ExperienceStoreState {
@@ -11,5 +11,7 @@ export interface ExperienceStoreState {
   clients: Client[];
   clientsIds: Set<string>;
   addClient: (client: Client) => void;
-  // addMultipleClients: (clients: Client[]) => void;
+  conversations: Record<string, Conversation>;
+  addConversation: (conv: Conversation) => void;
+  addMessage: (conversationId: string, message: Message) => void;
 }

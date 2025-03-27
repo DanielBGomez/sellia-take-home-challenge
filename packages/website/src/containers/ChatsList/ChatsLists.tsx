@@ -1,5 +1,6 @@
 // Modules
-import { Chip, Input, TabbedPanel } from '@owl-systems/ui-kit';
+import { useMemo } from 'react';
+import { Chip, Input, TabbedPanel, ChatListItem } from '@owl-systems/ui-kit';
 import { Typography } from '@owl-systems/ui-kit/mui-material';
 
 // Icons
@@ -7,10 +8,40 @@ import GroupsIcon from '@mui/icons-material/Groups';
 import SearchIcon from '@mui/icons-material/Search';
 import HistoryIcon from '@mui/icons-material/History';
 
+// Local Imports
+import { useExperienceStore } from '../../stores';
+import { useConversationAPI } from '../../api';
+
 /**
  * Chat Lists Container Component
  */
 export const ChatListContainer = () => {
+  // Stores
+  const clients = useExperienceStore((state) => state.clients);
+  const { getConversationLastMessage } = useConversationAPI();
+
+  // Effects
+
+  const chats = useMemo(
+    () =>
+      clients.map(({ _id, name }) => {
+        const lastMessage = getConversationLastMessage(_id);
+        console.log(lastMessage);
+        return (
+          <ChatListItem
+            key={_id}
+            contact={{
+              id: _id,
+              name,
+              source: 'whatsapp',
+            }}
+            lastMessage={lastMessage}
+          />
+        );
+      }),
+    [clients, getConversationLastMessage],
+  );
+
   // Render
   return (
     <TabbedPanel
@@ -70,7 +101,7 @@ export const ChatListContainer = () => {
         </div>
       }
     >
-      test
+      <div className="flex flex-col gap-2">{chats}</div>
     </TabbedPanel>
   );
 };

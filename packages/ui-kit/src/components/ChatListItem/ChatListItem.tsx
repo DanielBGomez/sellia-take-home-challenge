@@ -23,7 +23,7 @@ export const ChatListItem = ({
   onClick = () => {},
 }: ChatListItemProps) => {
   // Computed
-  const showCheckIcon = lastMessage.user.type !== 'Client';
+  const showCheckIcon = lastMessage.typeUser !== 'Client';
   /**
    * Get the proper status of the item by checking the status
    * and the lastMessage properties.
@@ -31,24 +31,24 @@ export const ChatListItem = ({
   const parsedStatus = useMemo(() => {
     if (status === 'done' || status === 'marked') return status;
 
-    const { user, readAt } = lastMessage;
+    const { typeUser, readAt } = lastMessage;
 
-    if (user.type !== 'Client') return 'default';
+    if (typeUser !== 'Client') return 'default';
     if (readAt === null) return 'unread';
 
     return 'pending';
-  }, [status, lastMessage.user.type, lastMessage.readAt]);
+  }, [status, lastMessage.typeUser, lastMessage.readAt]);
 
   // Render
   return (
     <Root
-      className="chat-list-item flex w-full justify-stretch items-stretch"
+      className="chat-list-item flex w-full justify-stretch items-stretch w-full"
       onClick={onClick}
     >
       <Flag status={parsedStatus} />
       <Box
         active={active}
-        className="flex items-center justify-stretch px-4 py-2 gap-4"
+        className="flex items-center justify-stretch px-4 py-2 gap-4 w-full"
       >
         <div className="relative shrink-0">
           {contact.image ? (
@@ -72,7 +72,7 @@ export const ChatListItem = ({
             <WhatsappIcon />
           </ContactSource>
         </div>
-        <div className="flex flex-col w-full gap-1">
+        <div className="flex flex-col w-0 gap-1 grow-1">
           <div className="flex w-full justify-space-between items-center gap-2">
             <Typography
               variant="small"
@@ -87,6 +87,7 @@ export const ChatListItem = ({
             <Typography
               variant="smallest"
               color="surfaceDim.contrastText"
+              sx={{ marginLeft: 'auto' }}
             >
               {moment(lastMessage.createdAt).fromNow()}
             </Typography>
@@ -96,8 +97,10 @@ export const ChatListItem = ({
             <Typography
               variant="small"
               color="surfaceDim.contrastText"
+              title={lastMessage.text}
+              className="text-overflow text-nowrap overflow-x-hidden text-ellipsis"
             >
-              {lastMessage.text}
+              {lastMessage.type === 'video' ? 'Video' : lastMessage.text}
             </Typography>
           </div>
         </div>
