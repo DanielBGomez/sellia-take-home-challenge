@@ -1,15 +1,18 @@
 // Modules
+import { useRef } from 'react';
+import { Input } from '@owl-systems/ui-kit';
 import { Avatar, Box, Typography } from '@owl-systems/ui-kit/mui-material';
 
 // Icons
 import PersonIcon from '@mui/icons-material/Person';
+import SendIcon from '@mui/icons-material/Send';
+import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 
 // Local Imports
 
 // Own Imports
 import { MessagesWrapper } from './Conversation.styled';
 import { useExperienceStore } from '../../stores';
-import { Input } from '@owl-systems/ui-kit';
 
 /**
  * Conversation Container Component
@@ -25,9 +28,8 @@ export const ConversationContainer = () => {
     (store) => store.clients[activeConversation],
   );
 
-  console.log(activeConversation);
-  console.log(conversation);
-  console.log('client', client);
+  // Refs
+  const messagesWrapperRef = useRef(null);
 
   // Computed
 
@@ -51,7 +53,7 @@ export const ConversationContainer = () => {
         </Avatar>
         <Typography>{client.name}</Typography>
       </Box>
-      <MessagesWrapper>
+      <MessagesWrapper ref={messagesWrapperRef}>
         {conversation.messages.map(({ _id, text }) => (
           <div
             key={_id}
@@ -61,7 +63,13 @@ export const ConversationContainer = () => {
           </div>
         ))}
       </MessagesWrapper>
-      <Input placeholder="Escribe un mensaje" />
+      <Input
+        placeholder="Escribe un mensaje"
+        icons={[
+          { component: <SendIcon />, position: 'right' },
+          { component: <InsertEmoticonIcon />, position: 'right' },
+        ]}
+      />
     </div>
   );
 };

@@ -1,7 +1,6 @@
 'use client';
 
 // Modules
-import { ChangeEvent } from 'react';
 import { Typography } from '@mui/material';
 
 // Own Imports

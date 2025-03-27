@@ -1,5 +1,5 @@
 // Modules
-import { ChangeEvent, HTMLAttributes, ReactElement, RefObject } from 'react';
+import { HTMLAttributes, ReactElement, RefObject } from 'react';
 
 // Interfaces
 export interface InputProps extends InputElementProps {

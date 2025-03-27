@@ -1,0 +1,56 @@
+{
+  "targetDefaults": {
+    "dev": {
+      "dependsOn": ["^build"]
+    },
+    "test": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "build": {
+      "cache": true,
+      "dependsOn": [],
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "build:dev": {
+      "cache": true,
+      "dependsOn": [],
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "build:production": {
+      "cache": true,
+      "dependsOn": [],
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "build:types": {
+      "cache": true,
+      "dependsOn": [],
+      "outputs": ["{projectRoot}/dist"]
+    },
+    "build:storybook": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "eslint": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "format": {
+      "dependsOn": []
+    },
+    "check-format": {
+      "dependsOn": []
+    },
+    "storybook": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "lint": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "preview": {
+      "dependsOn": ["^build"]
+    }
+  }
+}

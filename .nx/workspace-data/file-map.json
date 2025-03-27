@@ -1,0 +1,479 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.6.3",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".eslintrc",
+        "hash": "3071761953129852142"
+      },
+      {
+        "file": "README.md",
+        "hash": "537675555935593440"
+      },
+      {
+        "file": ".prettierrc",
+        "hash": "5189385801772247400"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "3961214735213552756"
+      },
+      {
+        "file": "package.json",
+        "hash": "3094978245163741658"
+      },
+      {
+        "file": ".eslintignore",
+        "hash": "17171934771412768404"
+      },
+      {
+        "file": ".nvmrc",
+        "hash": "10513322686562805636"
+      },
+      {
+        "file": ".github/CODEOWNERS",
+        "hash": "11417917822461611803"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13116728208240296076"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "14787304670907866154"
+      },
+      {
+        "file": "nx.json",
+        "hash": "17345271503306406717"
+      },
+      {
+        "file": "yarn.lock",
+        "hash": "921884276298256778"
+      }
+    ],
+    "projectFileMap": {
+      "@owl-systems/ui-kit": [
+        {
+          "file": "packages/ui-kit/.eslintrc",
+          "hash": "5474099401235950594"
+        },
+        {
+          "file": "packages/ui-kit/.gitignore",
+          "hash": "6922451714929810473"
+        },
+        {
+          "file": "packages/ui-kit/.prettierignore",
+          "hash": "528432567293004838"
+        },
+        {
+          "file": "packages/ui-kit/.storybook/main.ts",
+          "hash": "14836584505778538416"
+        },
+        {
+          "file": "packages/ui-kit/.storybook/preview.tsx",
+          "hash": "13221407444078890125"
+        },
+        {
+          "file": "packages/ui-kit/package.json",
+          "hash": "5736669130029174052",
+          "deps": [
+            "npm:react",
+            "npm:react-dom",
+            "npm:@emotion/react",
+            "npm:@emotion/styled",
+            "npm:@fontsource/outfit",
+            "npm:@mui/icons-material",
+            "npm:@mui/material",
+            "npm:@storybook/addon-essentials",
+            "npm:@storybook/addon-interactions",
+            "npm:@storybook/cli",
+            "npm:@storybook/react-vite",
+            "npm:@tailwindcss/vite",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@typescript-eslint/parser",
+            "npm:@vitejs/plugin-react",
+            "npm:classnames",
+            "npm:eslint",
+            "npm:eslint-config-ts-react-important-stuff",
+            "npm:jest",
+            "npm:lodash",
+            "npm:moment",
+            "npm:prettier",
+            "npm:storybook",
+            "npm:tailwindcss",
+            "npm:typescript",
+            "npm:vite",
+            "npm:vite-plugin-dts",
+            "npm:vite-plugin-svgr",
+            "npm:vitest"
+          ]
+        },
+        {
+          "file": "packages/ui-kit/plugins/vite-preserve-use-client.ts",
+          "hash": "17375780036811273313"
+        },
+        {
+          "file": "packages/ui-kit/src/assets/whatsapp.svg",
+          "hash": "7750930736683104527"
+        },
+        {
+          "file": "packages/ui-kit/src/components/ChatListItem/ChatListItem.stories.ts",
+          "hash": "4782417508672592252"
+        },
+        {
+          "file": "packages/ui-kit/src/components/ChatListItem/ChatListItem.styled.ts",
+          "hash": "16056329074424826616"
+        },
+        {
+          "file": "packages/ui-kit/src/components/ChatListItem/ChatListItem.tsx",
+          "hash": "13357845660925625691"
+        },
+        {
+          "file": "packages/ui-kit/src/components/ChatListItem/ChatListItem.types.d.ts",
+          "hash": "10972585002746295837"
+        },
+        {
+          "file": "packages/ui-kit/src/components/ChatListItem/index.ts",
+          "hash": "3768431111015872527"
+        },
+        {
+          "file": "packages/ui-kit/src/components/Chip/Chip.stories.ts",
+          "hash": "5865406400431979791"
+        },
+        {
+          "file": "packages/ui-kit/src/components/Chip/Chip.tsx",
+          "hash": "13172103673250716256"
+        },
+        {
+          "file": "packages/ui-kit/src/components/Chip/index.ts",
+          "hash": "17434284375168996970"
+        },
+        {
+          "file": "packages/ui-kit/src/components/Input/Input.stories.tsx",
+          "hash": "682011628242588084"
+        },
+        {
+          "file": "packages/ui-kit/src/components/Input/Input.styled.ts",
+          "hash": "8993345104997742983"
+        },
+        {
+          "file": "packages/ui-kit/src/components/Input/Input.tsx",
+          "hash": "2163950734284787428"
+        },
+        {
+          "file": "packages/ui-kit/src/components/Input/Input.types.d.ts",
+          "hash": "11955359100399404816"
+        },
+        {
+          "file": "packages/ui-kit/src/components/Input/index.ts",
+          "hash": "7624587041152063449"
+        },
+        {
+          "file": "packages/ui-kit/src/components/TabbedPanel/TabbedPanel.styled.ts",
+          "hash": "7772248862422932017"
+        },
+        {
+          "file": "packages/ui-kit/src/components/TabbedPanel/TabbedPanel.tsx",
+          "hash": "921122555817405698"
+        },
+        {
+          "file": "packages/ui-kit/src/components/TabbedPanel/TabbedPanel.types.d.ts",
+          "hash": "13559474835003514411"
+        },
+        {
+          "file": "packages/ui-kit/src/components/TabbedPanel/index.ts",
+          "hash": "751181866169631597"
+        },
+        {
+          "file": "packages/ui-kit/src/components/index.ts",
+          "hash": "1515407649326479354"
+        },
+        {
+          "file": "packages/ui-kit/src/global.declarations.d.ts",
+          "hash": "16709408873906075128"
+        },
+        {
+          "file": "packages/ui-kit/src/hooks/useParseInputIcons/index.ts",
+          "hash": "743849199889061549"
+        },
+        {
+          "file": "packages/ui-kit/src/hooks/useParseInputIcons/useParseInputIcons.styled.ts",
+          "hash": "6547802557827578562"
+        },
+        {
+          "file": "packages/ui-kit/src/hooks/useParseInputIcons/useParseInputIcons.tsx",
+          "hash": "10221151503785505055"
+        },
+        {
+          "file": "packages/ui-kit/src/hooks/useParseInputIcons/useParseInputIcons.types.d.ts",
+          "hash": "11167134250936210878"
+        },
+        {
+          "file": "packages/ui-kit/src/index.ts",
+          "hash": "4507800869190104418"
+        },
+        {
+          "file": "packages/ui-kit/src/mui-material/index.ts",
+          "hash": "7839783697335462520"
+        },
+        {
+          "file": "packages/ui-kit/src/tailwind.css",
+          "hash": "12581450644277444026"
+        },
+        {
+          "file": "packages/ui-kit/src/theme/components/MuiChip.ts",
+          "hash": "4111951042826582082"
+        },
+        {
+          "file": "packages/ui-kit/src/theme/components/MuiCssBaseline.ts",
+          "hash": "15101883644335228859"
+        },
+        {
+          "file": "packages/ui-kit/src/theme/components/MuiTypography.ts",
+          "hash": "15286961145784872143"
+        },
+        {
+          "file": "packages/ui-kit/src/theme/components/index.ts",
+          "hash": "17420164266082893483"
+        },
+        {
+          "file": "packages/ui-kit/src/theme/index.ts",
+          "hash": "16546573319003085871"
+        },
+        {
+          "file": "packages/ui-kit/src/theme/theme.dark.ts",
+          "hash": "12657148761448892010"
+        },
+        {
+          "file": "packages/ui-kit/src/theme/theme.light.ts",
+          "hash": "7075018712470645474"
+        },
+        {
+          "file": "packages/ui-kit/src/theme/theme.ts",
+          "hash": "6816662231504041266"
+        },
+        {
+          "file": "packages/ui-kit/src/theme/theme.types.d.ts",
+          "hash": "3795414840954032365"
+        },
+        {
+          "file": "packages/ui-kit/static/user.png",
+          "hash": "1890847824136153198"
+        },
+        {
+          "file": "packages/ui-kit/tailwind.config.js",
+          "hash": "911775044120779249"
+        },
+        {
+          "file": "packages/ui-kit/tsconfig.json",
+          "hash": "3846959724707518159"
+        },
+        {
+          "file": "packages/ui-kit/vite.config.mjs",
+          "hash": "6801032402899665055"
+        }
+      ],
+      "@owl-systems/website": [
+        {
+          "file": "packages/website/.gitignore",
+          "hash": "13046175384202504187"
+        },
+        {
+          "file": "packages/website/README.md",
+          "hash": "6831436746312197211"
+        },
+        {
+          "file": "packages/website/eslint.config.js",
+          "hash": "16145672096969245511"
+        },
+        {
+          "file": "packages/website/index.html",
+          "hash": "10114733788614237948"
+        },
+        {
+          "file": "packages/website/package.json",
+          "hash": "7617339635272538649",
+          "deps": [
+            "npm:@eslint/js",
+            "npm:@mui/icons-material@7.0.0",
+            "@owl-systems/ui-kit",
+            "npm:@tailwindcss/vite",
+            "npm:@types/react",
+            "npm:@types/react-dom",
+            "npm:@types/searchjs",
+            "npm:@vitejs/plugin-react",
+            "npm:axios",
+            "npm:eslint",
+            "npm:eslint-plugin-react-hooks",
+            "npm:eslint-plugin-react-refresh",
+            "npm:globals@15.15.0",
+            "npm:searchjs",
+            "npm:tailwindcss@4.0.16",
+            "npm:typescript@5.7.3",
+            "npm:typescript-eslint@8.28.0",
+            "npm:vite",
+            "npm:zustand",
+            "npm:react",
+            "npm:react-dom"
+          ]
+        },
+        {
+          "file": "packages/website/public/chats-bg.png",
+          "hash": "6050146431526830595"
+        },
+        {
+          "file": "packages/website/public/vite.svg",
+          "hash": "16046085400642193116"
+        },
+        {
+          "file": "packages/website/src/api/clients/clients.ts",
+          "hash": "14803113310583865311"
+        },
+        {
+          "file": "packages/website/src/api/clients/clients.types.d.ts",
+          "hash": "488404627800212334"
+        },
+        {
+          "file": "packages/website/src/api/clients/index.ts",
+          "hash": "3631478781941612305"
+        },
+        {
+          "file": "packages/website/src/api/conversation/conversation.ts",
+          "hash": "18270889334253511730"
+        },
+        {
+          "file": "packages/website/src/api/conversation/conversation.types.d.ts",
+          "hash": "1156149299420031495"
+        },
+        {
+          "file": "packages/website/src/api/conversation/index.ts",
+          "hash": "18027351743428828248"
+        },
+        {
+          "file": "packages/website/src/api/index.ts",
+          "hash": "8668890856621208507"
+        },
+        {
+          "file": "packages/website/src/assets/logo-white.svg",
+          "hash": "4058145501006724710"
+        },
+        {
+          "file": "packages/website/src/assets/react.svg",
+          "hash": "16069471864800376455"
+        },
+        {
+          "file": "packages/website/src/containers/ChatsList/ChatsLists.tsx",
+          "hash": "7206350492897325438"
+        },
+        {
+          "file": "packages/website/src/containers/ChatsList/index.ts",
+          "hash": "9902261877232711553"
+        },
+        {
+          "file": "packages/website/src/containers/Conversation/Conversation.styled.ts",
+          "hash": "3213172307323206408"
+        },
+        {
+          "file": "packages/website/src/containers/Conversation/Conversation.tsx",
+          "hash": "17813079328235962025"
+        },
+        {
+          "file": "packages/website/src/containers/Conversation/index.ts",
+          "hash": "2861474733104757652"
+        },
+        {
+          "file": "packages/website/src/containers/index.ts",
+          "hash": "799913289869207251"
+        },
+        {
+          "file": "packages/website/src/experiences/HeyCenter/HeyCenter.tsx",
+          "hash": "5190988356920884840"
+        },
+        {
+          "file": "packages/website/src/experiences/HeyCenter/index.ts",
+          "hash": "4649299797649673202"
+        },
+        {
+          "file": "packages/website/src/experiences/index.ts",
+          "hash": "4649299797649673202"
+        },
+        {
+          "file": "packages/website/src/global.types.d.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "packages/website/src/hooks/index.ts",
+          "hash": "9820816366496024185"
+        },
+        {
+          "file": "packages/website/src/hooks/useSystemTheme/index.ts",
+          "hash": "9820816366496024185"
+        },
+        {
+          "file": "packages/website/src/hooks/useSystemTheme/useSystemTheme.ts",
+          "hash": "12755585640676710578"
+        },
+        {
+          "file": "packages/website/src/index.css",
+          "hash": "16103881322356392196"
+        },
+        {
+          "file": "packages/website/src/main.tsx",
+          "hash": "11427148807210712507"
+        },
+        {
+          "file": "packages/website/src/sections/ChatsList/ChatsList.tsx",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "packages/website/src/sections/ChatsList/index.ts",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "packages/website/src/stores/ExperienceStore/ExperienceStore.ts",
+          "hash": "7209784768729770589"
+        },
+        {
+          "file": "packages/website/src/stores/ExperienceStore/ExperienceStore.types.d.ts",
+          "hash": "14176119453867457500"
+        },
+        {
+          "file": "packages/website/src/stores/ExperienceStore/index.ts",
+          "hash": "3541185101962978767"
+        },
+        {
+          "file": "packages/website/src/stores/index.ts",
+          "hash": "13517136716136598181"
+        },
+        {
+          "file": "packages/website/src/vite-env.d.ts",
+          "hash": "12946363841406869089"
+        },
+        {
+          "file": "packages/website/tailwind.config.js",
+          "hash": "1426719959376069681"
+        },
+        {
+          "file": "packages/website/tsconfig.app.json",
+          "hash": "2323919910019125824"
+        },
+        {
+          "file": "packages/website/tsconfig.json",
+          "hash": "2365188958523842680"
+        },
+        {
+          "file": "packages/website/tsconfig.node.json",
+          "hash": "4200375265648421840"
+        },
+        {
+          "file": "packages/website/vite.config.ts",
+          "hash": "14259875586067689839"
+        }
+      ]
+    }
+  }
+}

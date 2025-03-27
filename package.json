@@ -11,14 +11,15 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "nx build @owl-systems/web",
+    "build": "nx build @owl-systems/website",
     "build:ui-kit": "nx build @owl-systems/ui-kit",
-    "build:influencehub": "nx build @owl-systems/web",
+    "build:influencehub": "nx build @owl-systems/website",
     "build:storybook": "nx run-many -t build:storybook",
     "eslint": "nx run-many -t eslint",
     "format": "nx run-many -t format",
     "check-format": "nx run-many -t check-format",
-    "dev": "nx dev @owl-systems/web",
+    "dev": "nx dev @owl-systems/website",
+    "preview": "nx preview @owl-systems/website",
     "watch": "concurrently \"yarn:watch:ui-kit\" \"yarn:dev\"",
     "watch:ui-kit": "nx run @owl-systems/ui-kit:watch",
     "storybook": "nx run-many -t storybook",

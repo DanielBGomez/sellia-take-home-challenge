@@ -143,7 +143,7 @@ export const ChatListContainer = () => {
                 color="primaryDarkContainer"
               />
               <Chip
-                label="Cerrados"
+                label="Cerradoss"
                 color="primaryDarkContainer"
               />
             </>
