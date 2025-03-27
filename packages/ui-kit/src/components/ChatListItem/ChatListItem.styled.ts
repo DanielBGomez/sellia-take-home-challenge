@@ -6,6 +6,7 @@ import { BoxComponentProps, FlagElementProps } from './ChatListItem.types';
 
 // Elements
 export const Root = styled('div')(({ onClick }) => ({
+  minWidth: 300,
   cursor: onClick ? 'pointer' : 'default',
 }));
 

@@ -74,4 +74,4 @@ dist
 # Changelog temp files
 .changelog
 commit.sh
-.nx/cache
+.nx

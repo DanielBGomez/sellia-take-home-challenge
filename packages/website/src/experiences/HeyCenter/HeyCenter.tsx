@@ -94,7 +94,7 @@ export const HeyCenterExperience = () => {
             {theme === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
           </IconButton>
         </Box>
-        <div className="flex justify-stretch items-stretch w-full m-0 grow-1">
+        <div className="flex justify-stretch items-stretch w-full m-0 grow-1 h-0">
           <ChatListContainer />
           {activeConversation ? (
             <ConversationContainer />

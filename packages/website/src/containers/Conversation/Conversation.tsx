@@ -54,14 +54,16 @@ export const ConversationContainer = () => {
         <Typography>{client.name}</Typography>
       </Box>
       <MessagesWrapper ref={messagesWrapperRef}>
-        {conversation.messages.map(({ _id, text }) => (
-          <div
-            key={_id}
-            className="flex"
-          >
-            {text}
-          </div>
-        ))}
+        <div className="flex flex-col w-full gap-4 justify-end p-6 h-fit">
+          {conversation.messages.map(({ _id, text }) => (
+            <div
+              key={_id}
+              className="flex"
+            >
+              {text}
+            </div>
+          ))}
+        </div>
       </MessagesWrapper>
       <Input
         placeholder="Escribe un mensaje"

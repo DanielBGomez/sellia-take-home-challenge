@@ -80,3 +80,45 @@ Esto ejecuta **simultáneamente**:
 | `yarn storybook`       | Corre storybook local (si está configurado por paquete)     |
 
 ---
+
+## 📖 Storybook – Documentación de Componentes
+
+Este proyecto incluye una instancia de [Storybook](https://storybook.js.org/) para documentar visualmente todos los componentes del `UI Kit`.
+
+### 👉 Ver Storybook en desarrollo
+
+```bash
+yarn storybook
+```
+
+> Esto abrirá una interfaz donde podés visualizar y probar todos los componentes reutilizables del sistema de diseño.
+
+### 📦 ¿Dónde se definen los stories?
+
+Cada componente del `@owl-systems/ui-kit` puede tener su archivo `*.stories.tsx` en la misma carpeta o en `/stories`.
+
+---
+
+## 🎨 Style Guide & Sistema de Diseño
+
+### 🧠 Base de estilos
+
+Toda la identidad visual del sistema está centralizada en el archivo:
+
+```
+packages/ui-kit/src/theme.ts
+```
+
+Ahí se definen:
+
+- Paleta extendida de colores (`primaryDark`, `tertiary`, `surface`, etc.)
+- Tipografías personalizadas (`small`, `smallest`, `body`)
+- Breakpoints, borderRadius, sombras y otros tokens
+
+### 🧾 Enlace a Figma
+
+Para complementar el código con la referencia visual, podés acceder al **Style Guide en Figma**:
+
+👉 [Abrir Style Guide en Figma](https://www.figma.com/design/8V8knFbOIeDyCxxYxNxr9N/Sellia?node-id=10-1513&m=dev)
+
+> Incluye tokens, ejemplos de componentes, tipografías, colores, entre otros.
