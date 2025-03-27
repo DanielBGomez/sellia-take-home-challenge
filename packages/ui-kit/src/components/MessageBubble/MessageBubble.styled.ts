@@ -7,7 +7,7 @@ import { RootElementProps } from './MessageBubble.types';
 // Configs
 const VARIANT_MAP_TO_COLOR = {
   Client: 'primaryContainer',
-  UserSystem: 'tertiaryContainer',
+  UserSystem: 'secondary',
   User: 'tertiary',
 };
 

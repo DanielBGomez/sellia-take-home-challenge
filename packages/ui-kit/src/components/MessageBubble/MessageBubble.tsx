@@ -31,7 +31,7 @@ export const MessageBubble = ({
     <Root
       className="flex flex-col"
       variant={typeUser}
-      hasActions={Boolean(actions.length)}
+      hasActions={Boolean(actions && actions.length)}
     >
       <div className="flex flex-col gap-0 items-stretch px-3">
         <div className="flex justify-stretch gap-2">
