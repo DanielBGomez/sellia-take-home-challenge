@@ -5,6 +5,7 @@ import {
   CssBaseline,
   IconButton,
   ThemeProvider,
+  Typography,
 } from '@owl-systems/ui-kit/mui-material';
 
 // Icons
@@ -14,10 +15,9 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 // Local Imports
 import { useExperienceStore } from '../../stores';
 import { useSystemTheme } from '../../hooks';
-import { ChatListContainer } from '../../containers';
+import { ChatListContainer, ConversationContainer } from '../../containers';
 import { useClientsAPI, useConversationAPI } from '../../api';
 import { useEffect } from 'react';
-import {} from '../../api/conversation';
 
 /**
  * HeyCenter Experience
@@ -26,9 +26,12 @@ export const HeyCenterExperience = () => {
   // Stores
   const theme = useExperienceStore((state) => state.theme);
   const changeTheme = useExperienceStore((state) => state.changeTheme);
-  const clientsIds = useExperienceStore((state) => state.clientsIds);
+  const clients = useExperienceStore((state) => state.clients);
   const addClient = useExperienceStore((state) => state.addClient);
   const addConversation = useExperienceStore((state) => state.addConversation);
+  const activeConversation = useExperienceStore(
+    (state) => state.activeConversation,
+  );
 
   // Hooks
   useSystemTheme();
@@ -56,10 +59,10 @@ export const HeyCenterExperience = () => {
    * Conversations Fetch
    */
   useEffect(() => {
-    Array.from(clientsIds).forEach((id) => {
+    Object.keys(clients).forEach((id) => {
       getConversation(id).then((conversation) => addConversation(conversation));
     });
-  }, [addConversation, clientsIds, getConversation]);
+  }, [addConversation, clients, getConversation]);
 
   // Render
   return (
@@ -93,6 +96,13 @@ export const HeyCenterExperience = () => {
         </Box>
         <div className="flex justify-stretch items-stretch w-full m-0 grow-1">
           <ChatListContainer />
+          {activeConversation ? (
+            <ConversationContainer />
+          ) : (
+            <div className="flex m0 grow-1 shrink-1 items-center justify-center">
+              <Typography>Selecciona una conversación para iniciar</Typography>
+            </div>
+          )}
         </div>
       </div>
     </ThemeProvider>

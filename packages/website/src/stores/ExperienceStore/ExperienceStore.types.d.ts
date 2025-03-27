@@ -8,9 +8,9 @@ import { Client, Conversation } from '../../api';
 export interface ExperienceStoreState {
   theme?: Themes;
   changeTheme: (theme: Themes) => void;
-  clients: Client[];
-  clientsIds: Set<string>;
+  clients: Record<string, Client>;
   addClient: (client: Client) => void;
+  getClient: (clientId: string) => Client | undefined;
   conversations: Record<string, Conversation>;
   activeConversation?: string;
   addConversation: (conv: Conversation) => void;

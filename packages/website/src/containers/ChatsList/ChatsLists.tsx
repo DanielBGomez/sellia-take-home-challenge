@@ -1,6 +1,5 @@
 // Modules
 import { useMemo, useState } from 'react';
-import searchjs from 'searchjs';
 import { Chip, Input, TabbedPanel, ChatListItem } from '@owl-systems/ui-kit';
 import { Typography } from '@owl-systems/ui-kit/mui-material';
 
@@ -25,11 +24,15 @@ export const ChatListContainer = () => {
   const setActiveConversation = useExperienceStore(
     (state) => state.setActiveConversation,
   );
+
+  // Hooks
   const { getConversationLastMessage } = useConversationAPI();
 
   // States
   const [activeTab, setActiveTab] = useState(undefined);
   const [filterString, setFilterString] = useState('');
+
+  console.log('clients', clients);
 
   // Computed
   /**
@@ -37,7 +40,7 @@ export const ChatListContainer = () => {
    */
   const chats = useMemo(
     () =>
-      clients
+      Object.values(clients)
         .filter(() => activeTab === 'chats') // Tab filter
         .filter(
           ({ name }) =>
