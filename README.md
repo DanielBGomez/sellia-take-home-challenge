@@ -24,16 +24,16 @@ Asegurate de tener instaladas las siguientes herramientas:
 
 1. Instalar versión correcta de Node (definida en `.nvmrc`):
 
-\`\`\`bash
+```bash
 nvm install
 nvm use
-\`\`\`
+```
 
 2. Instalar dependencias del monorepo:
 
-\`\`\`bash
+```bash
 yarn install
-\`\`\`
+```
 
 ---
 
@@ -43,9 +43,9 @@ yarn install
 
 ### 🧪 Ejecutar el website (modo dev)
 
-\`\`\`bash
+```bash
 yarn dev
-\`\`\`
+```
 
 Esto ejecutará el script `dev` del sitio web (`@owl-systems/website`) y compilará automáticamente su dependencia (`@owl-systems/ui-kit`) si es necesario.
 
@@ -55,9 +55,9 @@ Esto ejecutará el script `dev` del sitio web (`@owl-systems/website`) y compila
 
 ### 🧪 Ejecutar en modo desarrollo con watch activo
 
-\`\`\`bash
+```bash
 yarn watch
-\`\`\`
+```
 
 Esto ejecuta **simultáneamente**:
 
